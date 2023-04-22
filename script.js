@@ -1,11 +1,9 @@
-//your JS code here. If required.
-let x = document.getElementById('x');
+window.addEventListener('resize', function() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
 
-let y = document.getElementById('y');
-function reportWindowSize() {
-  x.textContent = window.innerWidth;
-  y.textContent = window.innerHeight;
-}
-window.addEventListener('resize',reportWindowSize)
-
-window.onresize = reportWindowSize;
+  const sizeInfo = document.querySelector('#sizeInfo');
+  if (sizeInfo) {
+    sizeInfo.innerHTML = `<h1>Width: ${width} and Height: ${height}</h1>`;
+  }
+});
